@@ -58,7 +58,7 @@ def validateTitle(title):
     else:
         return True
   
-def taskInput():
+def taskInput(): 
     
     title = input("\nEnter task name: \n > ")
     while not validateTitle(title):

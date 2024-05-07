@@ -6,7 +6,7 @@ init()
 
 class WorkManager:
     def __init__(self):
-        self.tasks = []
+        self.tasks = [] 
         
     def addTask(self, title, priority, category, due_date):
         # if priority == 1: priority == "High"

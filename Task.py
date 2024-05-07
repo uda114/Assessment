@@ -10,4 +10,4 @@ class TaskWork:
         self.category = category
         self.due_date = due_date
         self.completed = False
- 
+  
