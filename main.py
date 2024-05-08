@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
         if (choice.capitalize() == "Add"):
             title, priority, category, due_date = taskInput()
-            Work_Manager.addTask(title, priority, category, due_date)
+            Work_Manager.addTask(title, priority.capitalize(), category.capitalize(), due_date)
             print(Fore.GREEN +"\n Task added successfully." + Style.RESET_ALL)
             
         elif (choice.capitalize() == "List"):
@@ -123,7 +123,7 @@ if __name__ == "__main__":
             while not validatePriority(priority):
                 priority = input("\nEnter task priority High, Medium, or Low: ")
             # priority = setPriority(priority)
-            Work_Manager.priorotyFilter(priority)
+            Work_Manager.priorotyFilter(priority.capitalize())
             
         elif (choice.capitalize() == "Category"):
             print("\n\nView All Tasks:")
@@ -132,7 +132,7 @@ if __name__ == "__main__":
             while not validateCatagory(category):
                 category = input("\nEnter task category (Personal, or Business): ")
             # category = setCatagory(category)
-            Work_Manager.CategoryFilter(category)
+            Work_Manager.CategoryFilter(category.capitalize())
             
         elif (choice.capitalize() == "Date"):
             print("\n\nView All Sorted Tasks:")

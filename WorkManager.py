@@ -12,10 +12,13 @@ class WorkManager:
         # if priority == 1: priority == "High"
         # elif priority == 2: priority == "Medium"
         # elif priority == 3: priority == "Low"
-        
-        newTask = TaskWork(title, priority, category, due_date)
-        self.tasks.append(newTask)
-        
+        try: 
+            newTask = TaskWork(title, priority, category, due_date)
+            self.tasks.append(newTask)
+        except ValueError:
+            print(Fore.RED +"Task is not added"+ Style.RESET_ALL)
+            print(ValueError)
+            
     def viewTask(self):
         tabledata = []
         for i, task in enumerate(self.tasks, start=1):
